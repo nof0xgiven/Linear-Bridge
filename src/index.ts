@@ -53,7 +53,7 @@ app.get('/metrics', async (c) => {
 })
 
 app.get('/', (c) => {
-  return c.text('enhance-ticket webhook server')
+  return c.text('linear-bridge webhook server')
 })
 
 // OAuth callback handler

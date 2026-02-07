@@ -127,7 +127,7 @@ async function listRepoPromptWorkspaces(timeoutMs: number): Promise<RepoPromptWo
 
 async function createRepoPromptWorkspace(timeoutMs: number, repoPath: string): Promise<void> {
   const baseName = path.basename(repoPath) || 'workspace'
-  const name = `enhance-ticket:${baseName}`
+  const name = `linear-bridge:${baseName}`
 
   const { exitCode, stdout, stderr } = await runProcess(
     [

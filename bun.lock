@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "enhance-ticket",
+      "name": "linear-bridge",
       "dependencies": {
         "@linear/sdk": "^32.0.0",
         "commander": "^12.1.0",

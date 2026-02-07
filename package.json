@@ -1,10 +1,10 @@
 {
-  "name": "enhance-ticket",
+  "name": "linear-bridge",
   "version": "1.0.0",
   "description": "Linear webhook service that runs RepoPrompt and Sandbox Agent workflows from Linear labels and mentions",
   "type": "module",
   "bin": {
-    "enhance-ticket": "dist/cli/index.js"
+    "linear-bridge": "dist/cli/index.js"
   },
   "scripts": {
     "dev": "bun --watch src/index.ts",

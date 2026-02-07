@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to enhance-ticket.
+Thanks for contributing to linear-bridge.
 
 ## Development
 
