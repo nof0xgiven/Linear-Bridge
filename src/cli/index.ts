@@ -9,7 +9,7 @@ import { linearCommand } from './commands/linear'
 const program = new Command()
 
 program
-  .name('enhance-ticket')
+  .name('linear-bridge')
   .description('Automation tool for Linear label/mention workflows')
   .version('1.0.0')
 

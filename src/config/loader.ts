@@ -23,11 +23,11 @@ export function loadConfig(options: LoadConfigOptions = {}): AppConfig {
 }
 
 export function resolveConfigPaths(): string[] {
-  const envConfig = process.env.ENHANCE_TICKET_CONFIG
+  const envConfig = process.env.LINEAR_BRIDGE_CONFIG
   if (envConfig) {
     const paths = envConfig.split(',').map((p) => p.trim()).filter(Boolean)
     if (paths.length === 0) {
-      throw new Error('ENHANCE_TICKET_CONFIG is set but empty')
+      throw new Error('LINEAR_BRIDGE_CONFIG is set but empty')
     }
     paths.forEach((configPath) => {
       if (!fs.existsSync(configPath)) {
@@ -38,13 +38,13 @@ export function resolveConfigPaths(): string[] {
   }
 
   const cwdConfig = path.join(process.cwd(), 'config.yaml')
-  const homeConfig = path.join(os.homedir(), '.enhance-ticket', 'config.yaml')
+  const homeConfig = path.join(os.homedir(), '.linear-bridge', 'config.yaml')
   // Merge order matters: later configs override earlier ones.
   // Use home as fallback and allow local config to override it.
   const candidates = [homeConfig, cwdConfig].filter((p) => fs.existsSync(p))
   if (candidates.length === 0) {
     throw new Error(
-      'No config file found. Set ENHANCE_TICKET_CONFIG or create ./config.yaml'
+      'No config file found. Set LINEAR_BRIDGE_CONFIG or create ./config.yaml'
     )
   }
   return candidates

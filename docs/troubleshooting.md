@@ -21,7 +21,7 @@
 ## Sandbox Agent Errors
 
 - Ensure `sandbox-agent` is installed and reachable.
-- Run `enhance-ticket agent test` to verify connectivity.
+- Run `linear-bridge agent test` to verify connectivity.
 
 ## Guide Agent Errors
 

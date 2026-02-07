@@ -1,6 +1,6 @@
 # linear-bridge
 
-Linear webhook service (CLI: `enhance-ticket`) that runs RepoPrompt (`rp-cli`) and Sandbox Agent workflows from Linear issue labels and comment mentions (configuration-driven).
+Linear webhook service (CLI: `linear-bridge`) that runs RepoPrompt (`rp-cli`) and Sandbox Agent workflows from Linear issue labels and comment mentions (configuration-driven).
 
 It supports context discovery, planning, coding in isolated git worktrees, code review, user guide generation, and optional GitHub PR automation (via `gh` + GitHub webhooks).
 

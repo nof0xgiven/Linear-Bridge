@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  enhance-ticket:
+  linear-bridge:
     build: .
     ports:
       - "4747:4747"
@@ -12,8 +12,8 @@ services:
 
   ngrok:
     image: ngrok/ngrok:latest
-    command: http enhance-ticket:4747
+    command: http linear-bridge:4747
     environment:
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
     depends_on:
-      - enhance-ticket
+      - linear-bridge

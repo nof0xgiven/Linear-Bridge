@@ -2,9 +2,9 @@
 
 All configuration is file-based. Defaults are loaded from:
 
-1. `ENHANCE_TICKET_CONFIG` (comma-separated list)
+1. `LINEAR_BRIDGE_CONFIG` (comma-separated list)
 2. `./config.yaml`
-3. `~/.enhance-ticket/config.yaml`
+3. `~/.linear-bridge/config.yaml`
 
 Environment variables in the config are interpolated using `${VAR_NAME}`.
 When multiple config files are present, later entries override earlier ones. By default, local `./config.yaml` overrides the home config.
