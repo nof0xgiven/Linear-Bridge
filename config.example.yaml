@@ -171,7 +171,7 @@ sandbox:
 context:
   enabled: true
   command: "rp-cli -e 'context_builder task=\"{TASK}\"'"
-  timeoutMs: 600000
+  timeoutMs: 900000
   maxOutputSize: 50000
 
 worktree:

@@ -98,7 +98,7 @@ export const SandboxSchema = z.object({
 export const ContextSchema = z.object({
   enabled: z.boolean().default(true),
   command: z.string().min(1).default('rp-cli -e \'context_builder task="{TASK}"\''),
-  timeoutMs: z.number().int().positive().default(600000),
+  timeoutMs: z.number().int().positive().default(900000),
   maxOutputSize: z.number().int().positive().default(50000),
 })
 

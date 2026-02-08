@@ -54,6 +54,12 @@ async function runProcess(
     },
   })
 
+  // Start consuming stdout/stderr immediately to avoid pipe buffer deadlock.
+  // If we wait for proc.exited before reading, the process can block writing
+  // to a full pipe buffer (typically 64KB), causing a false timeout.
+  const stdoutPromise = new Response(proc.stdout).text()
+  const stderrPromise = new Response(proc.stderr).text()
+
   let timeoutId: ReturnType<typeof setTimeout> | null = null
   const timeoutPromise = new Promise<never>((_, reject) => {
     timeoutId = setTimeout(() => {
@@ -69,8 +75,8 @@ async function runProcess(
     if (timeoutId) clearTimeout(timeoutId)
   }
 
-  const stdout = await new Response(proc.stdout).text()
-  const stderr = await new Response(proc.stderr).text()
+  const stdout = await stdoutPromise
+  const stderr = await stderrPromise
   return { exitCode, stdout, stderr }
 }
 
